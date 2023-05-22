@@ -50,9 +50,10 @@
             qt6.qttools.dev
             qt6.qtscxml.dev
             qt6.qtsvg.dev
-            # qt6.qtconnectivity.dev
-            # qt6.qtconnectivity
-            # libsodium
+            
+            qt6.qtconnectivity.dev
+            qt6.qtconnectivity
+            libsodium
           ];
 
           shellHook = ''
