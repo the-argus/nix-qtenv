@@ -31,18 +31,28 @@
             # qtcreator # if the environment works, qtcreator should also
             cmake
             gnumake
+            extra-cmake-modules
+            pkg-config
+            libcxx
+
+            # qt5
             # libsForQt5.qt5.qtbase
             # libsForQt5.qt5.qtbase.dev
             # libsForQt5.qt5.qtbase.bin
-            extra-cmake-modules
+            # qt5.qmake
+            libsecret
+            
+            # qt6 environment for Charm master
             qt6.qtbase.dev
             qt6.qtbase
-            qt6.qmake
-            qt6.qtconnectivity.dev
-            qt6.qtconnectivity
-            libsodium
-            libsecret
-            libcxx
+            # qt6.qmake
+            qt6.qt5compat.dev
+            qt6.qttools.dev
+            qt6.qtscxml.dev
+            qt6.qtsvg.dev
+            # qt6.qtconnectivity.dev
+            # qt6.qtconnectivity
+            # libsodium
           ];
 
           shellHook = ''
