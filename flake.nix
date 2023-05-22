@@ -31,15 +31,23 @@
             # qtcreator # if the environment works, qtcreator should also
             cmake
             gnumake
-            libsForQt5.qt5.qtbase
-            libsForQt5.qt5.qtbase.dev
-            libsForQt5.qt5.qtbase.bin
-            libsForQt5.extra-cmake-modules
+            # libsForQt5.qt5.qtbase
+            # libsForQt5.qt5.qtbase.dev
+            # libsForQt5.qt5.qtbase.bin
+            extra-cmake-modules
+            qt6.qtbase.dev
+            qt6.qtbase
+            qt6.qmake
+            qt6.qtconnectivity.dev
+            qt6.qtconnectivity
+            libsodium
+            libsecret
             libcxx
           ];
 
           shellHook = ''
-            export QT_PLUGIN_PATH=${pkgs.libsForQt5.qt5.qtbase.bin}/lib/qt-${pkgs.libsForQt5.qt5.qtbase.qtCompatVersion}/plugins:$QT_PLUGIN_PATH
+            export QT_PLUGIN_PATH=${pkgs.qt6.qtbase}/lib/qt-6/plugins:$QT_PLUGIN_PATH
+            # export QT_PLUGIN_PATH=${pkgs.libsForQt5.qt5.qtbase.bin}/lib/qt-${pkgs.libsForQt5.qt5.qtbase.qtCompatVersion}/plugins:$QT_PLUGIN_PATH
           '';
         };
 
